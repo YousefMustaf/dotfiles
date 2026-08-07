@@ -1,0 +1,9 @@
+@theme "~/.config/rofi/themes/darkos.rasi"
+
+window {
+    width: 360px;
+}
+
+listview {
+    lines: 5;
+}

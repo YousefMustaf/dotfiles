@@ -1,0 +1,13 @@
+@theme "~/.config/rofi/themes/catppuccin.rasi"
+
+listview{
+
+    lines:5;
+
+}
+
+window{
+
+    width:350;
+
+}

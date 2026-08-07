@@ -1,0 +1,29 @@
+@import "~/.config/rofi/colors.rasi"
+@import "~/.config/rofi/fonts.rasi"
+@import "~/.config/rofi/themes/catppuccin.rasi"
+
+configuration{
+    modi: "drun,run,window";
+
+    show-icons: true;
+
+    display-drun: " Apps ";
+
+    display-run: " Run ";
+
+    display-window: " Windows ";
+
+    drun-display-format: "{icon}  {name}";
+
+    icon-theme: "Papirus-Dark";
+
+    terminal: "kitty";
+
+    sidebar-mode: false;
+
+    case-sensitive: false;
+
+    cycle: true;
+
+    hover-select: true;
+}
