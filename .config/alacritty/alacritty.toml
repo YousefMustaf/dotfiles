@@ -1,0 +1,104 @@
+[window]
+# Picom handles transparency
+opacity = 1.0
+
+# Slightly larger terminal
+#padding = { x = 10, y = 8 }
+
+# Don't let Alacritty automatically resize itself
+dynamic_padding = false
+
+# Window decorations
+decorations = "full"
+
+# Startup size
+dimensions = { columns = 120, lines = 32 }
+
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+
+size = 8
+
+# Makes the font slightly more comfortable
+offset = { x = 0, y = 2 }
+
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 500
+blink_timeout = 0
+
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+
+[selection]
+save_to_clipboard = true
+
+
+[terminal]
+osc52 = "CopyPaste"
+
+
+[mouse]
+hide_when_typing = true
+
+
+[keyboard]
+# Clear the terminal
+[[keyboard.bindings]]
+key = "L"
+mods = "Control"
+action = "ClearLogNotice"
+
+# Copy
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+# Paste
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+
+[colors.primary]
+background = "#11111b"
+foreground = "#cdd6f4"
+
+[colors.cursor]
+text = "#11111b"
+cursor = "#f5e0e6"
+
+[colors.selection]
+text = "#11111b"
+background = "#585b70"
+
+
+[colors.normal]
+black = "#45475a"
+red = "#f38ba8"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+blue = "#89b4fa"
+magenta = "#f5c2e7"
+cyan = "#94e2d5"
+white = "#bac2de"
+
+[colors.bright]
+black = "#585b70"
+red = "#f38ba8"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+blue = "#89b4fa"
+magenta = "#f5c2e7"
+cyan = "#94e2d5"
+white = "#a6adc8"

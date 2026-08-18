@@ -84,9 +84,18 @@ alias lg='eza -lah --git --icons --group-directories-first'
 alias lS='eza -lah --sort=size'
 alias lD='eza -lah --sort=modified'
 alias lx='eza -lah --sort=extension'
-alias vim='nvim'
 alias hello="figlet -f slant 'Hello Friend'"
-bash="/home/dark/01-MyData/Bash_Scripting/Bash-Scripting"
+alias vim="nvim"
+alias r="ranger"
+alias BASH="bash ~/scripts/vim.sh ~/01-MyData/01-Bash/Scripts"
+#Variables 
+bash="/home/dark/01-MyData/Bash-Scripting"
+
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
 
 
 # Ranger-cd Function : 

@@ -59,6 +59,12 @@ workspace_layout default
 #border indicator on windows:
 new_window pixel 1
 
+
+#Picom 
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+
+# NVIM
+bindsym $mod+Shift+T exec bash ~/scripts/vim.sh
 # thin borders
 # hide_edge_borders both
 
@@ -194,7 +200,11 @@ bindsym $mod+q kill
 # lock by blurring the screen:
 bindsym $mod+Shift+l exec --no-startup-id ~/.config/i3/scripts/blur-lock
 # lock in case after sleep
-exec --no-startup-id xss-lock -l ~/.config/i3/scripts/blur-lock
+#exec --no-startup-id xss-lock -l ~/.config/i3/scripts/blur-lock
+
+
+# Arabic Keyboard
+ exec --no-startup-id setxkbmap -option '' -layout 'us,ara' -option 'grp:win_space_toggle'
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -266,8 +276,6 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -451,13 +459,13 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 bindsym $mod+Shift+w exec --no-startup-id ~/scripts/wallpapers.sh
 
 # Yt-DLP
-bindsym $mod+Shift+d exec alacritty -e bash -c '/home/dark/scripts/claud-vid-downloader.sh'
+bindsym $mod+Shift+d exec kitty -e bash -c '/home/dark/scripts/claud-vid-downloader.sh'
 
 # exec --no-startup-id sleep 2 && nitrogen --restore
 exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+#exec --no-startup-id xset s 480 dpms 600 600 600
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
@@ -489,7 +497,7 @@ exec --no-startup-id /usr/bin/dunst
 #exec_always --no-startup-id autotiling
 
 # Autostart apps as you like
-exec --no-startup-id sleep 2 && alacritty
+#exec --no-startup-id sleep 2 && kitty
 #exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && thunar
 
@@ -609,7 +617,7 @@ client.urgent               $urgentred  $urgentred  $white      $yellowbrown    
 
 ## rofi bindings fancy application menu
 
-bindsym $mod+d exec ~/.config/rofi/launcher.sh
+bindsym $mod+d exec rofi -show drun
 
 bindsym $mod+Shift+e exec ~/.config/rofi/powermenu.sh
 
