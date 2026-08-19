@@ -20,7 +20,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import	 "colors/ef-trio-dark.rasi"
+@import	 "colors/ef-maris-light.rasi"
 
 * {
     border-colour:               var(selected);
@@ -121,8 +121,8 @@ entry {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     1;
-    lines:                       8;
+    columns:                     2;
+    lines:                       21;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;

@@ -20,7 +20,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import	 "colors/ef-trio-dark.rasi"
+@import	 "colors/ef-winter.rasi"
 
 * {
     border-colour:               var(selected);
@@ -55,7 +55,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       600px;
+    width:                       45%;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -121,8 +121,8 @@ entry {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     1;
-    lines:                       8;
+    columns:                     2;
+    lines:                       15;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
