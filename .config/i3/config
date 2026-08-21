@@ -63,6 +63,9 @@ new_window pixel 1
 #Picom 
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
+
+# FingerPrint Related
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # NVIM
 bindsym $mod+Shift+T exec bash ~/scripts/vim.sh
 # thin borders
@@ -204,8 +207,7 @@ bindsym $mod+Shift+l exec --no-startup-id ~/.config/i3/scripts/blur-lock
 
 
 # Arabic Keyboard
- exec --no-startup-id setxkbmap -option '' -layout 'us,ara' -option 'grp:win_space_toggle'
-
+exec_always --no-startup-id setxkbmap -option '' -layout 'us,ara' -option 'grp:win_space_toggle'
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -459,7 +461,12 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 bindsym $mod+Shift+w exec --no-startup-id ~/scripts/wallpapers.sh
 
 # Yt-DLP
-bindsym $mod+Shift+d exec kitty -e bash -c '/home/dark/scripts/claud-vid-downloader.sh'
+bindsym $mod+Shift+d exec alacritty -e bash -c '/home/dark/scripts/claud-vid-downloader.sh'
+
+
+# Auto USB Mount
+exec --no-startup-id udiskie
+
 
 # exec --no-startup-id sleep 2 && nitrogen --restore
 exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
