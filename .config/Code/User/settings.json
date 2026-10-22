@@ -1,0 +1,25 @@
+{
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Houston",
+    "update.mode": "none",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    "github.copilot.chat.tools.viewImage.enabled": false,
+    "github.copilot.chat.copilotDebugCommand.enabled": false,
+    "js/ts.suggest.autoImports": false,
+    "editor.inlineSuggest.enabled": false,
+    "github.copilot.renameSuggestions.triggerAutomatically": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "files.autoSave": "afterDelay",
+    "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"workbench.iconTheme": "vscode-great-icons",
+"liveServer.settings.AdvanceCustomBrowserCmdLine": "firefox",
+"editor.minimap.enabled": false
+}

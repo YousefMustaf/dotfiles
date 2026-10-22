@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "dark.pomodoro",
+  "name": "Pomodoro Timer",
+  "version": "1.0.0",
+  "author": "User",
+  "description": "A simple pomodoro timer for the status bar",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Pomodoro Timer",
+    "description": "25/5 pomodoro timer with work/break sessions",
+    "category": "Productivity",
+    "allowMultiple": false
+  }
+}

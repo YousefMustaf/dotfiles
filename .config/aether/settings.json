@@ -1,0 +1,8 @@
+{
+  "includeNeovim": false,
+  "includeVscode": true,
+  "includeZed": true,
+  "includedApps": {},
+  "selectedNeovimConfig": "",
+  "wallpaperFolder": "/home/dark/Wallpapers"
+}
