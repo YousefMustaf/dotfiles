@@ -23,6 +23,17 @@
 -- Disable a default binding without replacing it.
 -- hl.unbind("SUPER + SHIFT + B")
 
+o.bind("SUPER + H", "Focus on left window", hl.dsp.focus({ direction = "l" }))
+hl.unbind("SUPER + J")
+o.bind("SUPER + J", "Focus on below window", hl.dsp.focus({ direction = "d" }))
+o.bind("SUPER + SHIFT + J", "Toggle window split", hl.dsp.layout("togglesplit"))
+hl.unbind("SUPER + K")
+o.bind("SUPER + K", "Focus on above window", hl.dsp.focus({ direction = "u" }))
+o.bind("SUPER + SHIFT + K", "Keybindings", "omarchy-menu-keybindings")
+hl.unbind("SUPER + L")
+o.bind("SUPER + L", "Focus on right window", hl.dsp.focus({ direction = "r" }))
+o.bind("SUPER + SHIFT + L", "Toggle workspace layout", "omarchy-hyprland-workspace-layout-toggle")
+
 -- Logitech MX Keys examples:
 -- o.bind("SUPER + SHIFT + S", nil, "omarchy-capture-screenshot")
 -- o.bind("SUPER + H", nil, "voxtype record toggle")
@@ -33,3 +44,13 @@ o.bind("SUPER + E", "English input", "fcitx5-remote -c")
 o.bind("SUPER + A", "Arabic input", "fcitx5-remote -o; fcitx5-remote -s keyboard-ara")
 hl.unbind("SUPER + SHIFT + M")
 o.bind("SUPER + M", "Mandarin input", "fcitx5-remote -o; fcitx5-remote -s pinyin")
+
+for workspace = 1, 10 do
+  local key = "code:" .. tostring(workspace + 9)
+  local hp_workspace = "name:HP-" .. workspace
+
+  hl.unbind("SUPER + CTRL + " .. key)
+  o.bind("SUPER + CTRL + " .. key, "Switch to HP workspace " .. workspace, hl.dsp.focus({ workspace = hp_workspace }))
+  o.bind("SUPER + SHIFT + CTRL + " .. key, "Move window to HP workspace " .. workspace, hl.dsp.window.move({ workspace = hp_workspace }))
+  o.bind("SUPER + SHIFT + ALT + CTRL + " .. key, "Move window silently to HP workspace " .. workspace, hl.dsp.window.move({ workspace = hp_workspace, follow = false }))
+end
